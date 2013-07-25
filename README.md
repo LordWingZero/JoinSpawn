@@ -6,8 +6,8 @@ A bukkit plugin that spawns a player to a specified world when they join.
 Commands
 ========
 
-/joinspawn reload
-/joinspawn help
+* /joinspawn reload
+* /joinspawn help
 
 Permissions
 ===========
