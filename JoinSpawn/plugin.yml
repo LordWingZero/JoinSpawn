@@ -1,0 +1,13 @@
+name: JoinSpawn
+main: me.tunix2.joinspawn.JoinSpawn
+version: 1.0
+commands:
+   reload:
+      description: This is the reload command.
+      usage: /<command>
+      permission: joinspawn.reload
+      permission-message: You don't have <permission>
+      default: op
+   joinspawn:
+      description: This is the joinspawn command.
+      usage: /<command>

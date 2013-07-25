@@ -1,0 +1,9 @@
+# +------------------------------------------------------+ #
+# |                JoinSpawn configuration               | #
+# +------------------------------------------------------+ #
+
+# Title of the plugin? (for output)
+Title: '&7[&6JoinSpawn&7] '
+
+#worlds spawn to use (world players will be sent to when they join)
+Spawn-world: world
