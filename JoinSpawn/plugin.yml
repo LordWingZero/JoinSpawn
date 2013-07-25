@@ -1,6 +1,8 @@
 name: JoinSpawn
 main: me.tunix2.joinspawn.JoinSpawn
-version: 1.1
+version: 1.2
+softdepend: [Vault]
+
 commands:
    reload:
       description: This is the reload command.

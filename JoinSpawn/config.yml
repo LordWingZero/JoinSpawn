@@ -5,9 +5,15 @@
 # Title of the plugin? (for output)
 Title: '&7[&6JoinSpawn&7] '
 
-#worlds spawn to use (world players will be sent to when they join)
+# Worlds spawn to use (world players will be sent to when they join)
 Spawn-world: world
 
-#Message to send to players when they join.
+# Message to send to players when they join.
 # [playername] will be replaced with the players name
 Message: '&aWelcome back [player]! Sending you to spawn...'
+
+# Do not joinspawn players who are currently in these worlds:
+Exclude-worlds:
+    - world_nether
+    - world_the_end
+    

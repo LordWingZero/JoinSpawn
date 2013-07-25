@@ -2,10 +2,15 @@ package me.tunix2.joinspawn;
 
 import java.io.File;
 
+import net.milkbowl.vault.permission.Permission;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.PluginManager;
+import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
+
+
 
 
 
@@ -16,6 +21,7 @@ public final class JoinSpawn extends JavaPlugin {
 	
 	private static JoinSpawn instance;
 	private CommandHandler commandHandler;
+	private Permission perms = null;
 	 
 	    @Override
 	    public void onEnable(){
@@ -35,6 +41,9 @@ public final class JoinSpawn extends JavaPlugin {
 			
 			// Ready commands
 			commandHandler = new CommandHandler(this);
+			
+			// VAULT Setup permissions
+			setupPermissions();
 		    
 	    	getLogger().info("Enabled!");
 	    }
@@ -42,6 +51,13 @@ public final class JoinSpawn extends JavaPlugin {
 	    @Override
 	    public void onDisable() {
 	    	getLogger().info("Disabled!");
+	    }
+	    
+	    private boolean setupPermissions() {
+	    	
+	        RegisteredServiceProvider<Permission> rsp = getServer().getServicesManager().getRegistration(Permission.class);
+	        perms = rsp.getProvider();
+	        return perms != null;
 	    }
 	    
 	    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
@@ -61,6 +77,10 @@ public final class JoinSpawn extends JavaPlugin {
 	    
 		public static JoinSpawn getInstance() {
 			return instance;
+		}
+
+		public Permission getPerms() {
+			return perms;
 		}
 
 }
