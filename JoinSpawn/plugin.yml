@@ -1,6 +1,6 @@
 name: JoinSpawn
 main: me.tunix2.joinspawn.JoinSpawn
-version: 1.0
+version: 1.1
 commands:
    reload:
       description: This is the reload command.
